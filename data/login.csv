@@ -1,0 +1,6 @@
+testcase,description,user_name,password
+testcase001,正确的账号、密码,admin,admin
+testcase002,正确的账号、错误的密码,admin,admin1234
+testcase003,正确的账号、空的密码,admin,
+testcase004,错误的账号、正确的密码,admin1234,admin
+testcase005,空的账号、正确的密码,,admin
