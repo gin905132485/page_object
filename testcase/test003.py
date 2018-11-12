@@ -17,12 +17,12 @@ class LoginTestCase002(unittest.TestCase):
     def tearDown(self):
         sleep(3)
         self.a._quit()
-        
+
     def test001(self):
 
         '测试编辑功能'
 
-        self.a._click(self.a._find_ele('css_selector', '''#dataPanel > 
+        self.a._click(self.a._find_ele('css_selector', '''#dataPanel >
                 tr:nth-child(1) > td:nth-child(7) > label'''))
         sleep(1)
         _id_ = self.a._ele_value(self.a._find_ele('id', 'defectid'))
@@ -75,27 +75,27 @@ class LoginTestCase002(unittest.TestCase):
         _source_ = self.a._ele_value(self.a._find_ele('id', 'source'))
         _status_ = self.a._ele_value(self.a._find_ele('id', 'status'))
         _severity_ = self.a._ele_value(self.a._find_ele('id', 'severity'))
-        _priority_ = self.a._ele_value(self.a._find_ele('id', 'priority')) 
-        _module_ = self.a._ele_value(self.a._find_ele('id', 'module')) 
-        _platform_ = self.a._ele_value(self.a._find_ele('id', 'platform')) 
-        _version_ = self.a._ele_value(self.a._find_ele('id', 'version')) 
-        _headline_ = self.a._ele_value(self.a._find_ele('id', 'headline')) 
+        _priority_ = self.a._ele_value(self.a._find_ele('id', 'priority'))
+        _module_ = self.a._ele_value(self.a._find_ele('id', 'module'))
+        _platform_ = self.a._ele_value(self.a._find_ele('id', 'platform'))
+        _version_ = self.a._ele_value(self.a._find_ele('id', 'version'))
+        _headline_ = self.a._ele_value(self.a._find_ele('id', 'headline'))
 
         try:
             self.assertEqual(_id, _id_, msg='编号不为空')
             self.assertEqual(_creator, _creator_, msg='创建者不为空')
             self.assertEqual(_createdtime, _createdtime_, msg='创建时间不为空')
             self.assertEqual(_source, _source_, msg='缺陷来源不为空')
-            self.assertEqual(_status, _status_, msg='状态不为空')   
+            self.assertEqual(_status, _status_, msg='状态不为空')
             self.assertEqual(_severity, _severity_, msg='严重程度不为空')
             self.assertEqual(_priority, _priority_, msg='优先级不为空')
             self.assertEqual(_module, _module_, msg='所属模块不为空')
             self.assertEqual(_platform, _platform_, msg='测试平台不为空')
             self.assertEqual(_version, _version_, msg='测试版本不为空')
-            self.assertEqual(_headline, _headline_, msg='标题不为空') 
+            self.assertEqual(_headline, _headline_, msg='标题不为空')
         except:
             self.a._eimg(Log.fl_path, 'LoginTestCase003_test002.png')
-            raise       
+            raise
 
 if __name__ == '__main__':
     unittest.main()

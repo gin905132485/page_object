@@ -16,7 +16,7 @@ class Login(PageBase):
         self._send_keys(self._find_ele(pw_ele[0], pw_ele[1]), pw) #输入密码
         self._click(self._find_ele(save_ele[0], save_ele[1])) #取消保存用户信息
         self._click(self._find_ele(login_ele[0], login_ele[1])) #点击登录按钮
-        
+
 if __name__ == '__main__':
     a = Login()
     a.login('admin', 'admin')

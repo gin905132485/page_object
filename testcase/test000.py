@@ -40,18 +40,18 @@ class LoginTestCase000(unittest.TestCase):
         _source_ = self.a._ele_value(self.a._find_ele('id', 'source'))
         _status_ = self.a._ele_value(self.a._find_ele('id', 'status'))
         _severity_ = self.a._ele_value(self.a._find_ele('id', 'severity'))
-        _priority_ = self.a._ele_value(self.a._find_ele('id', 'priority')) 
-        _module_ = self.a._ele_value(self.a._find_ele('id', 'module')) 
-        _platform_ = self.a._ele_value(self.a._find_ele('id', 'platform')) 
-        _version_ = self.a._ele_value(self.a._find_ele('id', 'version')) 
-        _headline_ = self.a._ele_value(self.a._find_ele('id', 'headline')) 
+        _priority_ = self.a._ele_value(self.a._find_ele('id', 'priority'))
+        _module_ = self.a._ele_value(self.a._find_ele('id', 'module'))
+        _platform_ = self.a._ele_value(self.a._find_ele('id', 'platform'))
+        _version_ = self.a._ele_value(self.a._find_ele('id', 'version'))
+        _headline_ = self.a._ele_value(self.a._find_ele('id', 'headline'))
 
         try:
             self.assertEqual(_id, _id_, msg='编号不为空')
             self.assertEqual(_creator, _creator_, msg='默认创建者错误')
             self.assertEqual(_createdtime, _createdtime_, msg='默认创建时间不为空')
             self.assertEqual(_source, _source_, msg='默认缺陷来源错误')
-            self.assertEqual(_status, _status_, msg='默认状态错误')   
+            self.assertEqual(_status, _status_, msg='默认状态错误')
             self.assertEqual(_severity, _severity_, msg='默认严重程度错误')
             self.assertEqual(_priority, _priority_, msg='默认优先级错误')
             self.assertEqual(_module, _module_, msg='默认所属模块不为空')
@@ -62,11 +62,11 @@ class LoginTestCase000(unittest.TestCase):
             self.a._eimg(Log.fl_path, 'LoginTestCase000_test001.png')
             raise
 
-        
+
     def test002(self):
 
         '填写已经创建过的标题，再次创建时报错'
-        
+
         _err_msg = '出错啦: 缺陷标题已经存在 ...'
 
         self.a._send_keys(self.a._find_ele('id', 'headline'), '112233')

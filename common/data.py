@@ -20,7 +20,7 @@ class Data:
             if i != 0:
                 login_lst.append(j[2:4])
         return login_lst
-        
+
 if __name__ == "__main__":
     d = Data()
     d._login_data()

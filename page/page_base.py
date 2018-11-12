@@ -70,7 +70,7 @@ class PageBase:
         '获取当前页面网址'
         url = self.driver.current_url
         return url
-    
+
     def _select_option(self, ele, val):
         '''
         下拉框选择
@@ -100,7 +100,7 @@ class PageBase:
 
     def _quit(self):
         self.driver.quit()
-    
+
     def _close(self):
         self.driver.close()
 

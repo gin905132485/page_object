@@ -17,7 +17,7 @@ class LoginTestCase002(unittest.TestCase):
     def tearDown(self):
         sleep(3)
         self.a._quit()
-        
+
     def test001(self):
 
         '填写空标题，填写内容：字符数6，新建失败'
